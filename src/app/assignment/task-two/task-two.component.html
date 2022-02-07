@@ -1,0 +1,77 @@
+<body>
+    <h1 style="text-align: center; color: red; font-weight: bold; font-style: oblique;">WELCOME TO MY-PAGE :</h1>
+<div class="container">
+    
+    <div class="row col-xs-12">
+       
+        <h3>Assignment Task-02 - Data Binding:</h3>
+        <br><br>
+        <ol>
+            <li>Add a Input field which updates property('username') via two way binding</li>
+            <li>Output username property via string interpolation</li>
+            <li>Add a button which onlt be clicked if username is not an empty string</li>
+            <li>Upon clicking the button,username should be reset to an empty string</li>
+        </ol>
+    </div>
+</div>
+<br><br>
+<div class="row" style="text-align: center;">
+    <div class="col-xs-12" style="text-align: center;">
+        <label for = "userName" style="text-align: center;" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; ENTER YOUR NAME:</label> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  <input type="text" [(ngModel)]="userName" class="form-control" style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp; 
+        <br> &nbsp; <br>
+        <p> &nbsp;  &nbsp; {{userName}}</p>
+         <hr>
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <button class="btn btn-danger"
+          [disabled] = "userName === '' "
+          (click)="userName=''" >
+            Reset User
+        </button>
+    </div>
+</div>
+
+ <br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-4">
+            <ul class="list-group">
+                <div *ngIf="oddFlag">
+                    <li *ngFor="let odd of oddnumbers;let i=index" class="list-group-item"
+                        [ngClass]="{ odd:(i+1)%2 !  == 0 }"
+                        [ngStyle]="{backgroundColor:(i+1)%2 ! == 0 ? 'tomato' : 'trasparent'}">
+                        {{ odd }}
+                    </li>
+              </div>
+            </ul>
+        </div>
+        
+        <div class="col-12 col-sm-2">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <button class="btn btn-warning" (click)="oddFlag=!oddFlag">Odd Numbers:</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-success" (click)="evenFlag=!evenFlag">Even Numbers</button>
+                </li>
+            </ul>
+        
+        </div>
+        
+        <div class="col-12 col-sm-5">
+            <ul class="list-group">
+                <div *ngIf="evenFlag">
+                    <li *ngFor="let even of evennumbers;let i=index" class="list-group-item"
+                        [ngClass]="{even:(i+1)%2  ==0}"
+                        [ngStyle]="{backgroundColor:(i+1)%2  == 0 ? 'orange' : 'trasparent'}">
+                            {{ even }}
+                    </li>
+                </div>
+            </ul>
+
+        </div>
+
+    </div>
+
+  </div>
+
+</body>

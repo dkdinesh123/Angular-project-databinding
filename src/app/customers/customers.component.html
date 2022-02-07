@@ -1,0 +1,25 @@
+
+<h1 style="text-align: center; font-size: xx-large; font-weight: bold; font-style: italic; font-family: 'Times New Roman', Times, serif; color: blue; background-color: khaki;">
+    WELCOME TO MY CUSTOMER PAGE :
+</h1>
+<br>
+
+<div class="row" style="background-color: palegreen; font-size:large; font-style: italic; font-weight: bold; color: blue;">
+    <div class="col-12 col-sm-4">
+        <div class="list-group">
+            <a href="#" class = "list-group-item"
+                *ngFor= "let customer of customers" 
+                [routerLink]="['/customers',customer.id]">
+                
+                {{ customer.name }}
+                
+            </a>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-8">
+       
+   
+        <router-outlet></router-outlet>
+    </div>
+</div>

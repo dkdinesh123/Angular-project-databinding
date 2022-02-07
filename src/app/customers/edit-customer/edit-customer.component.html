@@ -1,0 +1,19 @@
+<h2 style="text-align: center; font-style: italic; color: red;">EDIT Customer PAGE.</h2>
+        <div class="form-group">
+            <label for = "name">Name Of A Customer:</label>
+            <input type="text"
+            [(ngModel)]="customerName"
+            class="form-control">
+        </div>
+      
+        <div class="form-group">
+            <label for = "status">Email Of An customer:</label>
+            <input type="email"
+            [(ngModel)]="customerEmail"
+            class="form-control">
+        </div>
+        
+        <button class = "btn btn-success" 
+            (click)="updateCustomer()" style="position: relative; left: 270px;">
+                Click Me To Update the customer
+        </button>

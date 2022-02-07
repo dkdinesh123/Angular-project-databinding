@@ -1,0 +1,21 @@
+<h2 style="text-align: center; font-style: italic; color: red;">EDIT SERVER PAGE.</h2>
+        <div class="form-group">
+            <label for = "name">Name Of A Server:</label>
+            <input type="text"
+            [(ngModel)]="serverName"
+            class="form-control">
+        </div>
+      
+        <div class="form-group">
+            <label for = "status">Status Of An Server:</label>
+            <select  [(ngModel)]="serverStatus"
+                class="form-control">
+                <option value="online">Online</option>
+                <option value="offline">Offine</option>
+            </select>
+        </div>
+        
+        <button class = "btn btn-success" 
+            (click)="updateServer()" style="position: relative; left: 270px;">
+                Click Me To Update the Server
+        </button>

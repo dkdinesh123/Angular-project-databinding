@@ -1,0 +1,20 @@
+h3
+{
+    color: red;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+    background-color: powderblue;
+    text-align: center;
+}
+
+ul
+{
+    color: brown;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+
+}

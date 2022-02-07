@@ -1,0 +1,24 @@
+<h1>
+    WELCOME TO MY SERVER PAGE :
+</h1>
+<br>
+
+<div class="row" style="background-color: palegreen; font-size:large; font-style: italic; font-weight: bold; color: blue;">
+    <div class="col-12 col-sm-4">
+        <div class="list-group">
+            <a href="#" class = "list-group-item"
+                *ngFor= "let server of servers" style="color: brown;"
+                [routerLink]="['/servers',server.id]">
+                {{ server.name }}
+                
+            </a>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-8">
+        <!-- <app-edit-server></app-edit-server> -->
+        <!-- <app-display-server></app-display-server> -->
+   
+        <router-outlet></router-outlet>
+    </div>
+</div>

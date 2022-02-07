@@ -1,0 +1,42 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3>Assignment Task-03 - Handling the (In-built) Directives :</h3>
+            <br>
+            <ol>
+                <li>Add a button which says "Display Details."</li>
+                <li>Add a paragaraph with any content of choice (password).</li>
+                <li>Toggle displaying of that paragaraph with button created in first page.</li>
+                <li>Log all button clicks in an array and output array below in secret paragraph.</li>
+                <li>Starting at the odd/even log item,give all future log items a skyblue for odd number and lightgreen.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- second row -->
+   <div class="row">
+       <div class="col-12">
+           <button class="btn btn-success" (click)="onToggleDetails()" style="color: blue; font-size:large; font-style: italic;">
+                        Click Me To Display All Details.
+           </button>
+           <p *ngIf="showSecret">Secret Password: dk@dinesh</p>
+           <div *ngFor="let log of logItem; let i=index"
+               [ngStyle]="{backgroundColor : i%2 == 0 ? 'yellow' : 'gold'}"
+               [ngClass]="{'txt-color':showSecret}">
+            
+             My Loggin ID:  {{ log.id  }} and Timestamp: {{log.timestamp}}
+
+           </div>
+       </div>
+   </div> 
+
+ <!-- third-row -->
+
+</div>
+</body>
+  
+
+
+
+

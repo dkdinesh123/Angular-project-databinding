@@ -1,0 +1,29 @@
+h4
+{
+    color: red;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+    background-color: yellow;
+    text-align: center;
+}
+h1
+{
+    color: red;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+    background-color: powderblue;
+    text-align: center;
+}
+ul
+{
+    color: blue;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+
+}

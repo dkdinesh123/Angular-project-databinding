@@ -1,0 +1,26 @@
+
+<h1 style="background-color: yellow;">WELCOME TO MY COMPONENT COMMUNICATION PAGE :</h1>
+<br>
+<br>
+<div class="container" style="background-color: powderblue;">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <div class="form-group" >
+                <label for="accountName" >Enter Your Account Name:</label>
+                <input type="text" #accName class="form-control" placeholder="Account Name" style="background-color: yellowgreen;font-size: x-large; font-weight: 500; font-style: italic;color: black;">
+            </div>
+            <div class = "form-group">
+                <label for="accountStatus">Enter Your Account Status: </label>
+                <select #accStatus class="form-control" style="background-color:yellowgreen; font-weight: bold; font-style: italic; color:black; font-size: large;" >
+                    <option value="active" style="font-size: large; font-weight: bold; font-style: italic; color: blue;">Active</option>
+                    <option value="inactive" style="font-size: large; font-weight: bold; font-style: italic; color: blue;">InActive</option>
+                    <option value="hidden" style="font-size: large; font-weight: bold; font-style: italic; color: blue;" >Hidden</option>
+                </select>
+            </div>
+            <button class = "btn btn-outline-warning"
+            (click)="onCreateAccount(accName.value,accStatus.value)">
+                Click Me to Add Account
+        </button>
+        </div>
+    </div>
+</div>

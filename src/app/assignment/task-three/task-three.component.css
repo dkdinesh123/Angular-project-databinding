@@ -1,0 +1,26 @@
+.txt-color
+{
+    font-style: italic;
+    font-size: x-large;
+    color:black;
+
+}
+h3
+{
+    color: blue;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+.container,li
+{
+    font-style: italic;
+    font-size: large;
+
+}
+body
+{
+    background-color: yellowgreen;
+}

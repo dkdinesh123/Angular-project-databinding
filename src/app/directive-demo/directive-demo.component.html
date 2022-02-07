@@ -1,0 +1,155 @@
+   <h1>WELCOME TO MY-PAGE:</h1>
+   <!-- odd and even numbers -->
+    <div class="container" style="background-color:plum;">
+        <div class="row">
+            <div class="col-12 col-sm-5">
+                <ul class="list-group">
+                    <!-- <div *ngIf="oddFlag"> -->
+                   
+                    <div *appUnless="oddFlag"> 
+                        <!-- myowndirectives-appUnless -->
+
+                        <li *ngFor="let odd of oddnumbers;let i=index" class="list-group-item"
+                            [ngClass]="{ odd:(i+1)%2 !  == 0 }"
+                            [ngStyle]="{backgroundColor:(i+1)%2 ! == 0 ? 'tomato' : 'trasparent'}">
+                            {{ odd }}
+                        </li>
+                  </div>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-sm-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <button class="btn btn-warning" (click)="oddFlag=!oddFlag">Odd Numbers:</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-success" (click)="evenFlag=!evenFlag">Even Numbers</button>
+                    </li>
+                </ul>
+            
+            </div>
+            
+            <div class="col-12 col-sm-5">
+                <ul class="list-group">
+                    <!-- <ng-template [ngIf]=evenFlag> 
+         ngif can be added in property once use the tag of ngtemplate. 
+                        
+                        <li *ngFor="let even of evennumbers;let i=index" class="list-group-item"
+                                [ngClass]="{even:(i+1)%2  ==0}"
+                                [ngStyle]="{backgroundColor:(i+1)%2  == 0 ? 'yellowgreen' : 'trasparent'}">
+                            {{ even }}
+                         </li>
+                    </ng-template> -->
+                   
+                    <!-- <div *ngIf="evenFlag"> -->
+                   
+                    <div *appUnless="evenFlag"> 
+                        <!-- myown directives appUnless -->
+                        <li *ngFor="let even of evennumbers;let i=index" class="list-group-item"
+                                [ngClass]="{even:(i+1)%2  ==0}"
+                                [ngStyle]="{backgroundColor:(i+1)%2  == 0 ? 'yellowgreen' : 'trasparent'}">
+                            {{ even }}
+                         </li>
+                    </div>
+                </ul>
+
+            </div>
+
+        </div>
+    
+        <div class="row">
+            <div class="col-12">
+                <h2 appBasicHighlight> Custom Directives: </h2>
+                <p appBasicHighlight>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat officiis laborum sunt corrupti fuga soluta delectus consectetur velit nulla quas, quis placeat quisquam voluptatum voluptates eligendi recusandae ad architecto?
+
+                </p>
+                <p appBetterHighlight>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis sit quae, unde tempora quos. Architecto aspernatur consequuntur molestias, illo dolorum praesentium beatae officiis, soluta vitae aliquam ut impedit repellendus.
+                </p>    
+                <p [appBetterHighlight]="'gold'" [defaultColor]= "'grey' " >
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia asperiores autem odit consectetur quaerat quos saepe repellendus id. Voluptate veniam adipisci ipsa magnam harum doloribus neque odio blanditiis tempore voluptatem?
+                </p>
+            </div>
+        </div>
+
+       
+   <!-- ngswitch     -->
+
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <button class="btn btn-outline-success" (click)="onlyOdd=!onlyOdd">
+                    Oly Highlight Certain Numbers:
+                </button>
+            </div>
+        </div>
+                
+       
+        <div class="row">
+            <div class ="col-12 col-sm-4">
+                <label for="choice">Enter Your Lucky Number Between 1 To 10 :</label>
+                <input type="text" class="form-control" [(ngModel)]="choice"> 
+            </div>
+
+        <div class="div col-12 col-sm-8">
+            <div [ngSwitch]="choice" style="text-align: center;">
+                <p *ngSwitchCase="1">Your Input Is Correct & Value is One</p>
+                <p *ngSwitchCase="2">Your Input Is Correct & Value is Two</p>
+                <p *ngSwitchCase="3">Your Input Is Correct & Value is Three</p>
+                <p *ngSwitchCase="4">Your Input Is Correct & Value is Four</p>
+                <p *ngSwitchCase="5">Your Input Is Correct & Value is Five</p>
+                <p *ngSwitchCase="6">Your Input Is Correct & Value is Six</p>
+                <p *ngSwitchCase="7">Your Input Is Correct & Value is Seven</p>
+                <p *ngSwitchCase="8">Your Input Is Correct & Value is Eight</p>
+                <p *ngSwitchCase="9">Your Input Is Correct & Value is Nine</p>
+                <p *ngSwitchCase="10">Your Input Is Correct & Value is Ten</p>
+                <br><br>
+                <p *ngSwitchDefault>Please Enter Correct input</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- odd and even numbers -->
+
+<div  class="row">
+            <div class="col-12">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <button class="btn btn-outline-primary"(click)="onlyOdd=!onlyOdd" style="font-weight: bold; color:red;">
+                    ODD NUMBERS CAN BE HIGHLIGHTED:
+                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button class="btn btn-outline-warning"(click)="onlyEven=!onlyEven" style="font-weight: bold; color:darkgreen;">
+                    EVEN NUMBERS CAN BE HIGHLIGHTED:
+                </button>  
+                <br>
+                <ul class="list-group">
+                   <div *ngIf="onlyOdd">
+                       <li *ngFor="let data of numbers" 
+                       class="list-group-item"
+                       [ngClass]="{odd:data%2 !==0}"
+                       [ngStyle]="{backgroundColor:data%2 !== 0 ? 'gold' : 'trasparent'}">
+                           {{ data }}
+                       </li>
+                   </div>
+                </ul>
+                 <ul class="list-group">
+                    <div *ngIf="onlyEven">
+                        <li *ngFor="let data of numbers" 
+                        class="list-group-item"
+                        [ngClass]="{Even:data%2 ==0}"
+                        [ngStyle]="{backgroundColor:data%2 == 0 ? 'pink' : 'trasparent'}">
+                            {{ data }}
+                        </li>
+                    </div>
+                 </ul>
+            </div>
+        </div>
+
+   </div>
+   
+       

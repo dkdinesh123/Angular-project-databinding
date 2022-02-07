@@ -1,0 +1,61 @@
+.odd
+{
+    color:red;
+}
+.Even
+{
+    color: blue;
+}
+
+h1
+{
+    background-color: yellow;
+    text-align: center;
+    color: blue;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+
+}
+h2
+{
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+body
+{
+    background-color: paleturquoise;
+}
+.container
+{
+    margin: top;
+    font-size: large;
+    font-weight: bold;
+}
+
+label
+{
+    font-weight: bold;
+    color: blue;
+    
+}
+.nav-item
+{
+margin-top: 10px;
+}
+.row
+{
+    margin-top: 30px;
+}
+p
+{
+    color: rgb(247, 10, 10);
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}

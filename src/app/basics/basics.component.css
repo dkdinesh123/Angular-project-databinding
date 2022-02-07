@@ -1,0 +1,33 @@
+h1
+{
+    text-align: center;
+    color: red;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 700;
+
+}
+h2
+{
+    text-align: center;
+    color: blue;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 700;
+}
+body
+{
+    background-color: powderblue;
+}
+.container
+{
+    margin: top;
+}
+label
+{
+    font-weight: bold;
+    color: blue;
+    
+}

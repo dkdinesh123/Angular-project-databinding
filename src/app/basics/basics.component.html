@@ -1,0 +1,60 @@
+<body>
+    <div class="container" style="background-color:gold;">
+      <div class="col-12">
+        
+          <h1>Hi Everyone.Welcome To My Page.</h1>
+       </div>
+    </div>
+  
+    <h2 >My Name is:{{myname}}</h2>
+    <button class="btn btn-warning" [disabled]="btnFlag" style="position: relative; left:430px;" >
+    Click Me.
+    <button class="btn btn-secondary" (click)=onclick() >
+      Click me to enter
+    </button>
+    
+    <hr>
+    <input type = "text" [(ngModel)]="username" style="font-size: x- large; font-style: italic; font-family: 'Times New Roman', Times, serif;"><br>
+    <hr style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-style: italic; color: blue; font-weight: bold;">
+    Your Name Is : {{username}}
+    <hr>
+    </button>
+    
+    <div class="row">
+            <div class="col-12 col-sm-3">
+              <h1>Login Component:</h1>
+                 <app-login></app-login>
+            </div>
+    
+            <div class="col-12 col-sm-3">
+              <h1>Login Component:</h1>
+                  <app-login></app-login>
+            </div>
+            
+            <div class="col-12 col-sm-3">
+               <h1>Login Component:</h1>
+                   <app-login></app-login>
+            </div>
+            <div class="col-12 col-sm-3">
+              <h1>Login Component:</h1>
+                  <app-login></app-login>
+           </div>
+    </div>
+    
+    <br>
+    
+    <!-- <div class="row">
+      <div class="col-12 col-sm-9">
+    
+      </div>
+      <div class="col-12 col-sm-3">
+        <h1>Login Component 2:</h1>
+    <app-login></app-login>
+      </div>
+    </div> -->
+    
+    </body>
+    
+    
+    
+    
